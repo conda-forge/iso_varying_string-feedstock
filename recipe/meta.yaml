@@ -10,7 +10,7 @@ source:
   sha256: 7d003ec444ca68f74e62588449ebe29e40721e61b14b830046d11b176d31f912
 
 build:
-  number: 0
+  number: 1
   script:
     - set -ex  # [unix]
     - export FFLAGS="${FFLAGS} -fcoarray=single"  # [unix]
