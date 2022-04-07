@@ -1,16 +1,16 @@
 {% set name = "iso_varying_string" %}
-{% set version = "2.3.1" %}
+{% set version = "2.3.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url:  https://gitlab.com/everythingfunctional/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 7d003ec444ca68f74e62588449ebe29e40721e61b14b830046d11b176d31f912
+  url: https://gitlab.com/everythingfunctional/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
+  sha256: eac858f7ccd74ee4b43595534be410e718e281c7aa94f5545b88257a5d2e6485
 
 build:
-  number: 1
+  number: 0
   script:
     - set -ex  # [unix]
     - export FFLAGS="${FFLAGS} -fcoarray=single"  # [unix]
