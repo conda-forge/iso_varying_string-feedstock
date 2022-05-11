@@ -1,5 +1,5 @@
 {% set name = "iso_varying_string" %}
-{% set version = "2.3.2" %}
+{% set version = "3.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/everythingfunctional/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: eac858f7ccd74ee4b43595534be410e718e281c7aa94f5545b88257a5d2e6485
+  sha256: 510b0da988e7282c0f729d5f5fb69a3d04bae984fee4e74551f6a823f3529c09
 
 build:
   number: 0
