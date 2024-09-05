@@ -10,7 +10,7 @@ source:
   sha256: 510b0da988e7282c0f729d5f5fb69a3d04bae984fee4e74551f6a823f3529c09
 
 build:
-  number: 0
+  number: 1
   script:
     - set -ex  # [unix]
     - export FFLAGS="${FFLAGS} -fcoarray=single"  # [unix]
@@ -27,6 +27,7 @@ requirements:
   build:
     - {{ compiler('fortran') }}  # [unix]
     - {{ compiler('m2w64_fortran') }}  # [win]
+    - {{ stdlib("c") }}    # [win]
     - cmake
     - ninja
 
