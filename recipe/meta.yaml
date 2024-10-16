@@ -1,5 +1,5 @@
 {% set name = "iso_varying_string" %}
-{% set version = "3.0.2" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/everythingfunctional/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 510b0da988e7282c0f729d5f5fb69a3d04bae984fee4e74551f6a823f3529c09
+  sha256: 7b631b7d47a75f288a15821d30adda8f5ba907af81227b94ff49ad123d2f9805
 
 build:
   number: 0
@@ -27,6 +27,7 @@ requirements:
   build:
     - {{ compiler('fortran') }}  # [unix]
     - {{ compiler('m2w64_fortran') }}  # [win]
+    - {{ stdlib("c") }}    # [win]
     - cmake
     - ninja
 
